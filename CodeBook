@@ -1,0 +1,22 @@
+##CodeBook
+
+This codebook describes the data, variables and detailed the steps to clean up the data. 
+
+##Data Description & Source File
+The data comes from a group of 30 volunteers performing 6 activites(WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING). A total of 561 variables were measured. 
+A full description is available at the site where the data was obtained:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+Data for the project is taken from:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datase
+
+Download data as Project.zip and extract all files under folder UCI HAR Dataset
+
+##Variables 
+Assign each data to variables. 
+Extracts only the measurements on the mean and standard deviation for each measurement.
+
+##Steps to clean up the data and called the R script run_analysis.R
+1. Merges the training and the test sets to create one data set using cbind and rbind. 
+2. Extracts only the measurements on the mean and standard deviation for each measurement by subsetting the merge_data using select
+3. Uses descriptive activity names to name the activities in the data set - The numbers under code are replaced with the full activity desciption taken from 2nd column of activities variable.  4. Appropriately labels the data set with descriptive variable names. 
+5. Create a second, independent tidy data set with the average of each variable for each activity and each subject from data set in step 4 using mean and saved the final output as "final_data1.csv"
