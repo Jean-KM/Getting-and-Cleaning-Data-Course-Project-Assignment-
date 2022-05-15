@@ -50,4 +50,4 @@ final_data <- tidy_data %>%
         group_by(subject,activity)%>%
         summarise_all(mean)
 
-write.table(final_data, "final_data1.csv", row.name= FALSE)
+write.table(final_data, "final_data1.txt", row.name= FALSE)
